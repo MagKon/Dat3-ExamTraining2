@@ -1,1 +1,29 @@
 // Check if env is set. If not, set it to dev and check the port is correct
+
+GET {{url}}/coffee
+
+### Create a plant
+
+POST {{url}}/plants
+Content-Type: application/json
+
+{
+  "id": 0,
+  "plantType": "PlantType1",
+  "plantName": "Plant 1",
+  "price": 10,
+  "height": 10
+}
+
+### Get all Plants
+
+GET {{url}}/plants
+
+
+### Get plant by id
+
+GET {{url}}/plants/2
+
+### Get plant by type
+
+GET {{url}}/plants/type/PlantType1

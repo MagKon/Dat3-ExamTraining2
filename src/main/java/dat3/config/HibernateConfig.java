@@ -92,7 +92,9 @@ public class HibernateConfig {
 
 
     private static void getAnnotationConfiguration(Configuration configuration) {
-        // TODO: Add classes here
+        configuration.addAnnotatedClass(dat3.persistence.Plant.class);
+        configuration.addAnnotatedClass(dat3.persistence.Reseller.class);
+        configuration.addAnnotatedClass(dat3.persistence.Reseller_Plant.class);
     }
 
     private static EntityManagerFactory getEntityManagerFactoryConfigDev() {

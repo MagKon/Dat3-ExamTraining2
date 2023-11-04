@@ -56,6 +56,9 @@ public class MemoryDAO<T extends IEntity> extends ADAO<T> {
     public T merge(T t) {
         // RemoveIf takes a predicate as a parameter. The predicate is a lambda expression that takes an entity as a parameter and returns a boolean.
         entities.removeIf(e -> e.getId().equals(t.getId()));
+        if (t.getId() == null) {
+            t.setId(idCounter++);
+        }
         entities.add(t);
         return t;
     }

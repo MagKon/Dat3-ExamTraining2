@@ -1,0 +1,1 @@
+// Check if env is set. If not, set it to dev and check the port is correct
